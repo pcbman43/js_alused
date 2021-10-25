@@ -1,21 +1,29 @@
-// elemendi loomine
-const li = document.createElement('li');
+// elemendi leidmine
+const form = document.querySelector('form');
+const taskInput = document.querySelector('#task');
+const heading = document.querySelector('h4');
 
-const list = document.querySelector('ul');
-// klassi maaramine
-li.className = 'collection-item';
+taskInput.value = '';
 
-// teksti lisamine
-li.appendChild(document.createTextNode('Study element creation'));
+// submit
+// form.addEventListener('submit', runEvent);
 
-const link = document.createElement('a');
-link.className = 'secondary-content';
-link.appendChild(document.createTextNode('X'));
+// keyboard
+// taskInput.addEventListener('keydown', runEvent);
+// taskInput.addEventListener('keyup', runEvent);
+// taskInput.addEventListener('keypress', runEvent);
 
-// lisa atribuut vaartusega
-link.setAttribute('href', '#');
+// input väljas fokuseerimine ja lahti fokuseerimine
+// taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('blur', runEvent);
 
-li.appendChild(link);
+// taskInput.addEventListener('cut', runEvent);
+// taskInput.addEventListener('paste', runEvent);
+// taskInput.addEventListener('input', runEvent);
 
-// elemendi lisamine teise elemendi sisse
-list.appendChild(li);
+
+function runEvent(e) {
+	console.log(`Event type: ${e.type}`);
+	heading.innerText = e.target.value;
+	// e.preventDefault();
+}
