@@ -1,34 +1,47 @@
-// Muutujad
-// var, let, const
+// Andmetüübid
 
-// deklareerimine
-// let name = 'Anna Karutina';
-// kasutamine
-// console.log(name);
-// name = 'Mihhail Karutin';
-// console.log(name);
+// Primitiivid
 
-// lubatud märgid nime loomisel - tähed, numbrid, _, $
-// numbriga muutuja nimi alustada ei tohi!
+// String - tekst
+const name = 'Anna';
+console.log(typeof name);
 
-// let $ = 'dollar';
-// console.log($);
+// Number
+const age = 15;
+console.log(typeof age);
 
-const name = 'Anna Karutina';
-console.log(name);
-// const ei saa muuta väärtust
-// name = 'Mihhail Karutin';
+const persent = 50.3;
+console.log(typeof persent);
 
-// massivid
-const numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-console.log(numbers);
+// Boolean - true või false
+const hasKids = true;
+console.log(typeof true);
 
-// objektid
+// Null
+const airplane = null;
+console.log(typeof airplane);
+
+// Undefined
+let test;
+console.log(typeof test);
+
+// Symbol
+const sym = Symbol();
+console.log(typeof sym);
+
+// Objects - reference types - tüübid, mille sisu saab viide kaudu
+// Array - massiv
+const hobbies = ['movies', 'music'];
+console.log(typeof hobbies);
+
+// Object
 const person = {
 	name: 'Kadi',
-	age: 20
+	age: 15
 };
-person.name = 'Kati';
-person.age = 15;
-console.log(person);
+console.log(typeof person);
+
+// näiteks kuupäeva objekt
+const today = new Date();
+console.log(typeof today);
+console.log(today);
