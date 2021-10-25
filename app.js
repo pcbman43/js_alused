@@ -1,36 +1,39 @@
 let val;
 
-val = document;
-val = document.all;
-val = document.all[5];
-val = document.all.length;
+// document.getElementById();
 
-val = document.head;
-val = document.body;
+val = document.getElementById('task-title');
+val = document.getElementById('task-title').id;
+val = document.getElementById('task-title').className;
 
-val = document.doctype;
+const taskTitle = document.getElementById('task-title');
 
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// stiili muutmine
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
-val = document.forms[0].action;
-val = document.forms[0].id;
+taskTitle.style.background = '#333';
+taskTitle.style.color = '#fff';
+taskTitle.style.padding = '5px';
+// taskTitle.style.display = 'none';
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList;
-val = document.links[0].classList[1];
+// sisu muutmine
+taskTitle.textContent = 'My Tasks';
+taskTitle.innerText = 'My Favorite Tasks';
+taskTitle.innerHTML = '<span style="color: red;">My Tasks</span>';
 
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[1];
-val = document.scripts[1].getAttribute('src');
+// document.querySelector();
+
+val = document.querySelector('#task-title');
+val = document.querySelector('.card-title');
+val = document.querySelector('h2');
+
+document.querySelector('li').style.color = 'green';
+
+document.querySelector('ul li').style.color = 'blue';
+
+document.querySelector('li:last-child').style.color = 'green';
+
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+document.querySelector('li:last-child').style.background = '#ccc';
 
 console.log(val);
