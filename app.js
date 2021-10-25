@@ -1,46 +1,39 @@
-const numbers1 = [43, 56, 33, 23, 44, 36, 5];
-const numbers2 = new Array(22, 45, 33, 76, 54);
-const fruits = ['õun', 'banaan', 'apelsiin', 'virsik'];
-const mixed = [22, 'Tere', true, undefined, null, {a:1, b:2}, new Date()];
-
+const person = {
+	firstName: 'Kadi',
+	lastName: 'Tamm',
+	age: 36,
+	email: 'kadi.tamm@gmail.com',
+	hobbies: ['muusika', 'sport'],
+	address: {
+		city: 'Tallinn',
+		county: 'Harjumaa'
+	},
+	getBirthYear: function() {
+		return 2021 - this.age;
+	}
+};
 
 let val;
 
-val = numbers1.length; // massiivi pikkus
- 
-val = Array.isArray(numbers1); // kas on massiiv
+val = person;
 
-val = numbers1[3]; // kindel element
-val = numbers1[0];
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1];
+val = person.address['city'];
+val = person.getBirthYear();
 
-numbers1[2] = 100; // elemendi lisamine
+const people = [
+	{name: 'Kadi', age: 36},
+	{name: 'Mati', age: 38},
+	{name: 'Mike', age: 23}
+];
 
-val = numbers1.indexOf(36); // elemendi järgi index
+val = people;
 
-numbers1.push(250); // element massiivi lõppu
-numbers1.unshift(120); // element massiivi ette
-numbers1.pop(); // element massiivi lõpust maha
-numbers1.shift(); // element massiivi eest maha
-
-// console.log(numbers1);
-
-// numbers1.splice(1, 3); // elementide välja lõikamine
-
-// numbers1.reverse(); // targurpidi massiiv
-val = numbers1.concat(numbers2); // massivide ühendamine
-
-val = fruits.sort(); // teksti masiivi sorteerimine
-
-console.log(numbers1);
-
-// numbrite massiivi sorteerimine kasvujärjekorras
-val = numbers1.sort(function(x, y){
-	return x - y;
-});
-
-// numbrite massiivi sorteerimine kahanemisjärjekorras
-val = numbers1.sort(function(x, y){
-	return y - x;
-});
+for(let i = 0; i < people.length; i++){
+	console.log(people[i].name);
+}
 
 console.log(val);
