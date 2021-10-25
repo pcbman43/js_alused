@@ -1,75 +1,49 @@
-/*
-if(tingimus) {
-	// tegevused if puhul
-} else {
-	// tegevused else puhul
-}
-*/
-
-const id = 100;
-
-// == - võrdub
-// != - ei võrdu
-// === - võrdub ja tüübikontroll
-// !== - ei võrdu ja tüübikontroll
-
-// kui undefined
-/*
-let testId;
-if(typeof testId !== 'undefined'){
-	console.log(`id on ${testId}`);
-} else {
-	console.log('id puudub');
-}
-*/
-
-// > ja <
-/*
-if(id > 100) {
-	console.log(`id on ${id} - suurem kui 100`);
-} else {
-	console.log(`id on ${id} - väiksem või võrdne 100`);
-}
-*/
-
-// if - else if - else
-/*
 const color = "blue";
-if(color === 'red'){
-	console.log('Stop!');
-} else if(color === 'yellow'){
-	console.log('Attention!');
-} else if(color === 'green'){
-	console.log('Go!');
-} else {
-	console.log('Color is not accepted!');
-}
-*/
 
-// and - &&
-const name = 'Kadi';
-const age = 70;
-
-if(age > 0 && age <= 12){
-	console.log(`${name} on laps`);
-} else if(age > 12 && age < 18){
-	console.log(`${name} on nooruk`);
-} else {
-	console.log(`${name} on täiskasvanu`);
+switch(color) {
+	case 'red':
+		console.log('Stop!');
+		break;
+	case 'yellow':
+		console.log('Attention!');
+		break;
+	case 'green':
+		console.log('Go!');
+		break;
+	default:
+		console.log('This color is not accepted!');
+		break;
 }
 
-// or - ||
-if(age < 18 || age > 65){
-	console.log(`${name} ei saa registreerida`);
-} else {
-	console.log(`${name} on registreeritud`);
+// loo kuupäeva objekt
+// nädalapäeva numbri järgi väljasta mis nädala
+// päevaga on tegu - eesti keeles
+// testi kõik päevad
+
+let day = new Date('10/03/2021');
+let dayNumber = day.getDay();
+console.log(dayNumber);
+
+switch(dayNumber){
+	case 0:
+		console.log('Pühapäev');
+		break;
+	case 1:
+		console.log('Esmaspäev');
+		break;
+	case 2:
+		console.log('Teisipäev');
+		break;
+	case 3:
+		console.log('Kolmapäev');
+		break;
+	case 4:
+		console.log('Neljapäev');
+		break;
+	case 5:
+		console.log('Reede');
+		break;
+	case 6:
+		console.log('Laupäev');
+		break;
 }
-
-// ? - ternary operaator
-console.log(id === 100 ? 'Õige' : 'Vale');
-
-// ilma {}
-if(id === 100) 
-	console.log('Korras');
-else 
-	console.log('Ei ole korras');
