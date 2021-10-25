@@ -1,47 +1,42 @@
-// Andmetüübid
+let val;
 
-// Primitiivid
+// number -> string
 
-// String - tekst
-const name = 'Anna';
-console.log(typeof name);
+val = String(555);
+val = String(4+4);
+val = String(5.6);
 
-// Number
-const age = 15;
-console.log(typeof age);
+// boolean -> string
 
-const persent = 50.3;
-console.log(typeof persent);
+val = String(true);
+val = String(false);
 
-// Boolean - true või false
-const hasKids = true;
-console.log(typeof true);
+// objekt -> string
+val = String(new Date());
 
-// Null
-const airplane = null;
-console.log(typeof airplane);
+// massiiv -> string
+val = String([1, 2, 3, 4]);
 
-// Undefined
-let test;
-console.log(typeof test);
+// toString()
+val = (5).toString();
+val = (true).toString();
 
-// Symbol
-const sym = Symbol();
-console.log(typeof sym);
 
-// Objects - reference types - tüübid, mille sisu saab viide kaudu
-// Array - massiv
-const hobbies = ['movies', 'music'];
-console.log(typeof hobbies);
+// string -> number
+val = Number('5');
+// boolean -> number
+val = Number(true);
+val = Number(false);
+// null -> number
+val = Number(null);
+// tekst -> number
+val = Number('tere');
+// massiv -> number
+val = Number([1, 2, 3]);
 
-// Object
-const person = {
-	name: 'Kadi',
-	age: 15
-};
-console.log(typeof person);
+// string -> number
+val = parseInt('100.30');
+val = parseFloat('100.30');
 
-// näiteks kuupäeva objekt
-const today = new Date();
-console.log(typeof today);
-console.log(today);
+console.log(typeof val);
+console.log(val);
